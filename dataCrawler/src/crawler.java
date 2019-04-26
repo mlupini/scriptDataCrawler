@@ -80,6 +80,8 @@ public class crawler {
                     //chiamo il metodo per la gestione dei nomi dentro un file .txt
                     insertNewCrawlUsers(fileEntry);
 
+                    fileEntry.delete();
+
                 }
                 //se non e corretta non faccio nulla.
                 else{
@@ -103,6 +105,13 @@ public class crawler {
         while ((st = br.readLine()) != null) {
             System.out.println(st); 
             usersToCrawl.add(st);
+        }
+    }
+
+    public void checkLists(ArrayList<String> comparator, ArrayList<String> toCompare){
+        for (int index = 0; index < toCompare.lenght() ; index++) {
+            for (int index2 = 0; index2 < comparator.lenght() ; index2++ ) {
+            }
         }
     } 
 } 
